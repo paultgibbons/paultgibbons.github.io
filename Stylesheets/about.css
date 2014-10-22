@@ -1,0 +1,12 @@
+#aboutme {
+    font-size: 20px;
+    margin: 20px 200px 20px 200px;
+}
+#xkcd {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+}
+#xkcdFooter {
+    text-align: center;
+}

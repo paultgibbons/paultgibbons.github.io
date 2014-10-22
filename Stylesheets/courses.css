@@ -1,0 +1,36 @@
+.kw {
+    color: red; font-weight: bold;
+}
+.course {
+    padding: 20px; border-bottom: 1px solid green;
+}
+.date {
+    padding-left: 10px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+}
+.stateAttribute {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    width: 30px;
+}
+.courseDescription {
+    padding-left: 80px;
+}
+.courseName {
+    cursor: pointer;
+    margin-top: 0px;
+}
+#current {
+    margin: 0px 100px;
+}
+#completed {
+    margin: 0px 100px;
+}
+.last {
+    border: 0px;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,15 @@
+#indexFooter {
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+#home {
+    width: 350px; 
+    margin: 0 auto; 
+    text-align: center;
+}
+#hw {
+    font-family: monospace, sans-serif;
+}

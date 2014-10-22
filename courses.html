@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Homepage for Paul Gibbons">
+        <meta name="author" content="Paul Gibbons">
+        <title>Gibbons 101</title>
+        <link rel="shortcut icon" href="Images/navBarGraph.png">
+        <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
+        <link rel="stylesheet" type="text/css" href="Stylesheets/courses.css">
+        <script type="text/javascript">
+            function navMouseOver(color) {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid "+color;
+            }
+            function exitNav() {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid white";
+            }
+            function getExpandState(proj, kw) {
+                for (var i = 0; i < proj.childNodes.length; i++) {
+                    if (proj.childNodes[i].className===kw) {
+                        return proj.childNodes[i];
+                    }
+                }
+            }
+            function toggleCollapse(proj) {
+                proj = document.getElementById(proj);
+                expandState = getExpandState(getExpandState(proj.parentNode, "courseName"), "stateAttribute");
+                if (!expandState) expandState = "[]";
+                if (proj.style.display==="none") {
+                    expandState.innerHTML = '<img src="Images/Vertical.png">';
+                    proj.style.display = "block";
+                } else {
+                    expandState.innerHTML = '<img src="Images/Horizontal.png">';
+                    proj.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header" id="topNavBar">
+            <div class="authorName">
+                Paul Gibbons
+            </div>
+            <div class="k6Image"><img src="Images/navBarGraph.png" height="80px" width="80px"></div>
+            <div class="navbar">
+                <div onclick="location.href='index.html'" class="navbarButton" onmouseover="navMouseOver('red')" onmouseout="exitNav()">Home</div>
+                <div onclick="location.href='projects.html'" class="navbarButton" onmouseover="navMouseOver('orange')" onmouseout="exitNav()">Projects</div>
+                <div onclick="location.href='skills.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Skills</div>
+                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('green')" onmouseout="exitNav()">Courses</div>
+                <div onclick="location.href='resume.html'" class="navbarButton" onmouseover="navMouseOver('blue')" onmouseout="exitNav()">Resume</div>
+                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('indigo')" onmouseout="exitNav()">About me</div>
+                <div onclick="location.href='contact.html'" class="navbarButton" onmouseover="navMouseOver('violet')" onmouseout="exitNav()">Contact</div>       
+            </div>
+        </div>
+        <div id="courses">
+            <div class="pageTitle">
+                <h1 style="font-size:280%;">Current Courses</h1>
+            </div>
+            <hr style="border: 1px solid green;">
+            <div id="current">
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course1')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 241 · System Programming
+                    </h2>
+                    <div class="courseDescription" id="course1">
+                        Basics of system programming, including POSIX processes, process control,
+                         inter-process communication, synchronization, signals, simple memory management, 
+                         file I/O and directories, shell programming, socket network programming, 
+                         RPC programming in distributed systems, basic security mechanisms, 
+                         and standard tools for systems programming such as debugging tools.
+                         Uses <span class="kw">C</span> programming language
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 357 · Numerical Methods I
+                    </h2>
+                    <div class="courseDescription" id="course2">
+                        Fundamentals of numerical methods for students in science and engineering; 
+                         floating-point computation, systems of linear equations, approximation of functions and integrals, 
+                         the single nonlinear equation, and the numerical solution of ordinary differential equations; 
+                         various applications in science and engineering; 
+                         programming exercises and use of high quality mathematical library routines.
+                         using <span class="kw">Python</span> with heavy use of numpy module
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course3')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 398 · Web App Development
+                    </h2>
+                    <div class="courseDescription" id="course3">
+                        An experimental course, this class teaches full stack web development standards, including
+                         <span class="kw">HTML, CSS, Javascript</span>, server-side programming, interactions with databases,
+                         <span class="kw">HTTP</span>, and Web Sockets. This class does not teach <em>Framework x</em>, but
+                         rather focuses on adhering to standard stylistic procedures and optimization.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course4')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 411 · Database Systems
+                    </h2>
+                    <div class="courseDescription" id="course4">
+                        Examination of the logical organization of databases: the entity-relationship model;
+                         the hierarchical, network, and relational data models and their languages. 
+                         Functional dependencies and normal forms. Design, implementation, 
+                         use of <span class="kw">SQL</span>,
+                         and optimization of query languages; security and integrity; 
+                         concurrency control, and distributed database systems.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course5')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 498 · Probability in Computer Science
+                    </h2>
+                    <div class="courseDescription" id="course5">
+                         Introduction to probability theory with applications to computer science.
+                          Calculations made using <span class="kw">R</span>
+                          Topics include conditional probability, independence, Bayes theorem, random variables, 
+                          joint and conditional distributions, expectation, variance and covariance, 
+                          central limit theorem, law of large numbers, Markov chains, entropy, maximum likelihood estimation, 
+                          Bayes estimation, linear regression, principal component analysis, hypothesis testing, 
+                          and confidence intervals.
+                    </div>
+                </div>
+            </div>
+            <div class="pageTitle">
+                <h1 style="font-size:280%;">Completed Courses</h1>
+            </div>
+            <hr style="border: 1px solid green;">
+            <div id="completed">
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course6')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 125 ·  Intro to Computer Science
+                    </h2>
+                    <div class="courseDescription" id="course6">
+                        Introduction to programming concepts in <span class="kw">Java</span> using <span class="kw">Eclipse</span> IDE
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course7')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 173 · Discrete Structures
+                    </h2>
+                    <div class="courseDescription" id="course7">
+                        Study of discrete mathematical structures frequently encountered 
+                         in the study of Computer Science.
+                         Sets, propositions, Boolean algebra, induction, recursion, relations,
+                         functions, function runtimes, and graphs.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course8')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 225 · Data Structures &amp Algorithms
+                    </h2>
+                    <div class="courseDescription" id="course8">
+                        Data abstractions: elementary data structures including 
+                         <span class="kw">lists, stacks, queues, heaps, hash-tables and trees</span> (Binary, AVL, KD, Quad, B) 
+                         and their implementation
+                         using an object-oriented programming language <span class="kw">C++</span>.
+                         Solutions to a variety of computational problems such as search on graphs and trees. 
+                         Elementary <span class="kw">Algorithmic Analysis</span>.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course9')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 233 · Computer Architecture
+                    </h2>
+                    <div class="courseDescription" id="course9">
+                        Fundamentals of computer architecture: digital logic design, 
+                         working up from the logic gate level to understand the function of a simple computer;
+                         machine-level programming in <span class="kw">MIPS</span> to understand implementation of high-level languages; 
+                         performance models of modern computer architectures to enable 
+                         performance optimization of software; hardware primitives for parallelism and security.
+                    </div>
+                </div>
+                <div class="course last">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course10')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>Math 461 · Probability Theory
+                    </h2>
+                    <div class="courseDescription" id="course10">
+                        Introduction to mathematical probability; 
+                         includes the calculus of probability, combinatorial analysis, random variables, <span class="kw">Bayes Theorem</span>
+                         expectation, distribution functions, moment-generating functions, and central limit theorem.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

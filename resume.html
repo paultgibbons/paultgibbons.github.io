@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Homepage for Paul Gibbons">
+        <meta name="author" content="Paul Gibbons">
+        <title>Gibbons 101</title>
+        <link rel="shortcut icon" href="Images/navBarGraph.png">
+        <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
+        <link rel="stylesheet" type="text/css" href="Stylesheets/resume.css">
+        <script type="text/javascript">
+            function navMouseOver(color) {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid "+color;
+            }
+            function exitNav() {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid white";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header" id="topNavBar">
+            <div class="authorName">
+                Paul Gibbons
+            </div>
+            <div class="k6Image"><img src="Images/navBarGraph.png" height="80px" width="80px"></div>
+            <div class="navbar">
+                <div onclick="location.href='index.html'" class="navbarButton" onmouseover="navMouseOver('red')" onmouseout="exitNav()">Home</div>
+                <div onclick="location.href='projects.html'" class="navbarButton" onmouseover="navMouseOver('orange')" onmouseout="exitNav()">Projects</div>
+                <div onclick="location.href='skills.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Skills</div>
+                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('green')" onmouseout="exitNav()">Courses</div>
+                <div onclick="location.href='resume.html'" class="navbarButton" onmouseover="navMouseOver('blue')" onmouseout="exitNav()">Resume</div>
+                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('indigo')" onmouseout="exitNav()">About me</div>
+                <div onclick="location.href='contact.html'" class="navbarButton" onmouseover="navMouseOver('violet')" onmouseout="exitNav()">Contact</div>       
+            </div>
+        </div>
+        <div class="pageTitle">
+            <h1 style="font-size:280%;">Résumé</h1>
+        </div>
+        <hr style="border: 1px solid blue;">
+        <div id="lastUpdate">
+            Resume as of: August 29 2014
+        </div>
+        <embed type="application/pdf" id="resume" src="resume.pdf">
+    </body>
+</html>

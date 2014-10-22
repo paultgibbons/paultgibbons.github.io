@@ -1,0 +1,11 @@
+#resume {
+    width: 845px;
+    margin: 20px 282px;
+    height: 1080px;
+}
+#lastUpdate {
+    font-size: 14px;
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+}

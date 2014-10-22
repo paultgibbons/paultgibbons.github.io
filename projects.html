@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Homepage for Paul Gibbons">
+        <meta name="author" content="Paul Gibbons">
+        <title>Gibbons 101</title>
+        <link rel="shortcut icon" href="Images/navBarGraph.png">
+        <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
+        <link rel="stylesheet" type="text/css" href="Stylesheets/projects.css">
+        <script type="text/javascript">
+            function navMouseOver(color) {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid "+color;
+            }
+            function exitNav() {
+                var header = document.getElementById("topNavBar");
+                header.style.border = "1px solid white";
+            }
+            function getExpandState(proj, kw) {
+                for (var i = 0; i < proj.childNodes.length; i++) {
+                    if (proj.childNodes[i].className===kw) {
+                        return proj.childNodes[i];
+                    }
+                }
+            }
+            function toggleCollapse(proj) {
+                proj = document.getElementById(proj);
+                expandState = getExpandState(getExpandState(proj.parentNode, "projectTitle"), "stateAttribute");
+                if (!expandState) expandState = "[]";
+                if (proj.style.display==="none") {
+                    expandState.innerHTML = '<img src="Images/Vertical.png">';
+                    proj.style.display = "block";
+                } else {
+                    expandState.innerHTML = '<img src="Images/Horizontal.png">';
+                    proj.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header" id="topNavBar">
+            <div class="authorName">
+                Paul Gibbons
+            </div>
+            <div class="k6Image"><img src="Images/navBarGraph.png" height="80px" width="80px"></div>
+            <div class="navbar">
+                <div onclick="location.href='index.html'" class="navbarButton" onmouseover="navMouseOver('red')" onmouseout="exitNav()">Home</div>
+                <div onclick="location.href='projects.html'" class="navbarButton" onmouseover="navMouseOver('orange')" onmouseout="exitNav()">Projects</div>
+                <div onclick="location.href='skills.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Skills</div>
+                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('green')" onmouseout="exitNav()">Courses</div>
+                <div onclick="location.href='resume.html'" class="navbarButton" onmouseover="navMouseOver('blue')" onmouseout="exitNav()">Resume</div>
+                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('indigo')" onmouseout="exitNav()">About me</div>
+                <div onclick="location.href='contact.html'" class="navbarButton" onmouseover="navMouseOver('violet')" onmouseout="exitNav()">Contact</div>       
+            </div>
+        </div>
+        <div id="projects">
+        <!-- add pictures -->
+            <div class="pageTitle">
+                <h1 style="font-size:280%;">Projects</h1>
+            </div>
+            <hr style="border: 1px solid orange;">
+            <div id = "projectsContent">
+                <div class="project">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj1')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            Interactive Intelligence Internship 
+                        <span class="date">May 2014 - August 2014</span>
+                    </h2>
+                    <div class="projectDescription" id="proj1">
+                        <div class="projectText">
+                            <p>As a summer intern, I did a variety of tasks including
+                                <ul>
+                                    <li>Update XML based documentation</li>
+                                    <li>Add to node-based javascript testing framework</li>
+                                    <li>Code generate a Java library to interact with company's RESTful API.
+                                    Generator coded in C#. Similar libraries existed for Javascript, Objective-C</li>
+                                    <li>Attended and participated in weekly team status meetings</li>
+                                </ul>
+                                There were lots of fun activities as well, such as a canoe trip, LAN parties, a pool party, and more.
+                            </p>
+                        </div>
+                        <img src="Images/inin.jpg" alt="Interactive Intelligence photo" width="335px" class="picture">
+                    </div>
+                    <!-- link to review -->
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            Hack Illinois
+                        <span class="date">April 2014</span>
+                    </h2>
+                    <div class="projectDescription" id="proj2">
+                        <div class="projectText">
+                            Three classmates and I built an Android application called "Hack Health" to take medical terms as queries and output information
+                             such as uses, side effects, name brands, etc. to the user. This was implemented using an API provided by
+                             <a href="https://www.e-imo.com/">IMO</a>. The API was only available for the weekend of the Hackathon.
+                             My role in the project was designing the layout of the app, as well as writing some java helper functions,
+                             particularly regarding parsing the information. We were awarded "Best Healthcare Hack", and each team member 
+                             was awarded an iPad mini.
+                        </div>
+                        <img src="Images/bottle.png" alt="Hack Illinois picture" class="picture">
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj3')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            CS 125 Course Assistant
+                        <span class="date">January 2014 - May 2014</span>
+                    </h2>
+                    <div class="projectDescription" id="proj3">
+                        <div class="projectText">
+                            Helped first-time programmers learn fundamentals of programming in java including
+                            Java programming language, version control, step-by-step debugging, Eclipse ide, and 
+                            Object-Oriented design. 
+                        </div>
+                        <img src="Images/cs125ca.png" alt="CS 125 CA picture" width="193px" class="picture">
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj4')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            Facebook Hackathon
+                        <span class="date">November 2013</span>
+                    </h2>
+                    <div class="projectDescription" id="proj4">
+                        <div class="projectText">
+                            Worked as part of a group of 4 to create a java app to 
+                            graphically show extended facebook family tree. My personal role was to
+                            calculate the locations of the images of friends to appear on screen
+                        </div>
+                        <img src="Images/fbhack.png" alt="Facebook Hack picture" width="380px" class="picture">
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj5')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            Prerequisite Calculator
+                        <span class="date">October 2013</span>
+                    </h2>
+                    <div class="projectDescription" id="proj5">
+                        <div class="projectText">
+                            This incomplete project found <a href="TODO ADD LINK TO HERE">here</a> calculates 
+                            courses a student is able to take based on what courses they have completed. It was inspired
+                            by needing to click on every given course to see what classes I needed to have already taken.
+                            The claculation is all done using front-end languages and jQuery 
+                        </div>
+                        <img src="Images/prereqCalc.png" alt="Calculator picture" width="380px" class="picture">
+                    </div>
+                </div>
+                <div class="project last">
+                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj6')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                            Personal Site
+                        <span class="date">Ongoing</span>
+                    </h2>
+                    <div class="projectDescription" id="proj6">
+                        <div class="projectText">
+                            This website is an ongoing project, first started as a project for Engineering 100.
+                        </div>
+                        <img src="Images/recursion.png" alt="Recursive picture" width="380px" class="picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
