@@ -61,6 +61,54 @@
             <hr style="border: 1px solid green;">
             <div id="current">
                 <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 374 · Algorithms and Models of Computation
+                    </h2>
+                    <div class="courseDescription" id="course2">
+                    Fundamentals of <span class="kw">Algorithms</span> and defining computers. Icludes Dynamic Programming, Defining Computers,
+                     Graph Algorithms, P v NP, Turing Machines
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 484 · Parallel Programming
+                    </h2>
+                    <div class="courseDescription" id="course2">
+                        Techniques for the programming of all classes of parallel computers and devices including shared memory and distributed memory multiprocessors,
+                         <span class="kw">SIMD</span> processors and co-processors, and special purpose devices. Key concepts in parallel programming such as reactive 
+                         and transformational programming, speculation, speedup, isoefficiency, and load balancing. Synchronization primitives, libraries and languages 
+                         for parallel programming such as <span class="kw">OpenMP and MPI</span>, performance monitoring, program tuning, analysis and programming of 
+                         numerical and symbolic parallel algorithms. Implement perfromence measuring tools.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 242 · Programming Studio
+                    </h2>
+                    <div class="courseDescription" id="course2">
+                        Intensive programming lab intended to strengthen skills in programming. How to write <span class="kw">readable code</span>. 
+                    </div>
+                </div>
+            </div>
+            <div class="pageTitle">
+                <h1 style="font-size:280%;">Completed Courses</h1>
+            </div>
+            <hr style="border: 1px solid green;">
+            <div id="completed">
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course8')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 225 · Data Structures &amp Algorithms
+                    </h2>
+                    <div class="courseDescription" id="course8">
+                        Data abstractions: elementary data structures including 
+                         <span class="kw">lists, stacks, queues, heaps, hash-tables and trees</span> (Binary, AVL, KD, Quad, B) 
+                         and their implementation
+                         using an object-oriented programming language <span class="kw">C++</span>.
+                         Solutions to a variety of computational problems such as search on graphs and trees. 
+                         Elementary <span class="kw">Algorithmic Analysis</span>.
+                    </div>
+                </div>
+                <div class="course">
                     <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course1')">
                         <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 241 · System Programming
                     </h2>
@@ -71,19 +119,6 @@
                          RPC programming in distributed systems, basic security mechanisms, 
                          and standard tools for systems programming such as debugging tools.
                          Uses <span class="kw">C</span> programming language
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 357 · Numerical Methods I
-                    </h2>
-                    <div class="courseDescription" id="course2">
-                        Fundamentals of numerical methods for students in science and engineering; 
-                         floating-point computation, systems of linear equations, approximation of functions and integrals, 
-                         the single nonlinear equation, and the numerical solution of ordinary differential equations; 
-                         various applications in science and engineering; 
-                         programming exercises and use of high quality mathematical library routines.
-                         using <span class="kw">Python</span> with heavy use of numpy module
                     </div>
                 </div>
                 <div class="course">
@@ -111,6 +146,32 @@
                     </div>
                 </div>
                 <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course9')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 233 · Computer Architecture
+                    </h2>
+                    <div class="courseDescription" id="course9">
+                        Fundamentals of computer architecture: digital logic design, 
+                         working up from the logic gate level to understand the function of a simple computer;
+                         machine-level programming in <span class="kw">MIPS</span> to understand implementation of high-level languages; 
+                         performance models of modern computer architectures to enable 
+                         performance optimization of software; hardware primitives for parallelism and security.
+                    </div>
+                </div>
+                <div class="course">
+                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 357 · Numerical Methods I
+                    </h2>
+                    <div class="courseDescription" id="course2">
+                        Fundamentals of numerical methods for students in science and engineering; 
+                         floating-point computation, systems of linear equations, approximation of functions and integrals, 
+                         the single nonlinear equation, and the numerical solution of ordinary differential equations; 
+                         various applications in science and engineering; 
+                         programming exercises and use of high quality mathematical library routines.
+                         using <span class="kw">Python</span> with heavy use of numpy module
+                    </div>
+                </div>
+                
+                <div class="course">
                     <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course5')">
                         <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 498 · Probability in Computer Science
                     </h2>
@@ -124,12 +185,6 @@
                           and confidence intervals.
                     </div>
                 </div>
-            </div>
-            <div class="pageTitle">
-                <h1 style="font-size:280%;">Completed Courses</h1>
-            </div>
-            <hr style="border: 1px solid green;">
-            <div id="completed">
                 <div class="course">
                     <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course6')">
                         <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 125 ·  Intro to Computer Science
@@ -147,31 +202,6 @@
                          in the study of Computer Science.
                          Sets, propositions, Boolean algebra, induction, recursion, relations,
                          functions, function runtimes, and graphs.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course8')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 225 · Data Structures &amp Algorithms
-                    </h2>
-                    <div class="courseDescription" id="course8">
-                        Data abstractions: elementary data structures including 
-                         <span class="kw">lists, stacks, queues, heaps, hash-tables and trees</span> (Binary, AVL, KD, Quad, B) 
-                         and their implementation
-                         using an object-oriented programming language <span class="kw">C++</span>.
-                         Solutions to a variety of computational problems such as search on graphs and trees. 
-                         Elementary <span class="kw">Algorithmic Analysis</span>.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course9')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 233 · Computer Architecture
-                    </h2>
-                    <div class="courseDescription" id="course9">
-                        Fundamentals of computer architecture: digital logic design, 
-                         working up from the logic gate level to understand the function of a simple computer;
-                         machine-level programming in <span class="kw">MIPS</span> to understand implementation of high-level languages; 
-                         performance models of modern computer architectures to enable 
-                         performance optimization of software; hardware primitives for parallelism and security.
                     </div>
                 </div>
                 <div class="course last">
