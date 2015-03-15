@@ -25,6 +25,7 @@
                 }
             }
             function toggleCollapse(proj) {
+                return;
                 proj = document.getElementById(proj);
                 expandState = getExpandState(getExpandState(proj.parentNode, "skillName"), "stateAttribute");
                 if (!expandState) expandState = "[]";
@@ -62,7 +63,7 @@
             <!-- throw in code segment for each skill -->
             <div class="skill">
                 <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill1')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>Java
+                    <span c</span>Java
                 </h2>
                 <div class="skillDetails" id="skill1">
                     Language in which I am most proficient.
@@ -71,49 +72,65 @@
                 </div>
             </div>
             <div class="skill">
+                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill5')">
+                    C
+                </h2>
+                <div class="skillDetails" id="skill5">
+                    Pthreads, Processes, System-level programming, Sockets, OpenMP, MPI
+                </div>
+            </div>
+            <div class="skill">
                 <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill2')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>Python
+                    Python
                 </h2>
                 <div class="skillDetails" id="skill2">
-                Experience with Google App Engine, Numerical Analysis,
+                Experience with Django, Google App Engine, Numerical Analysis,
                 and small scripts
                 </div>
             </div>
             <div class="skill">
                 <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill3')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>Javascript
+                    Javascript
                 </h2>
                 <div class="skillDetails" id="skill3">
                     Experience with React, Flux, JSON, Node based js, and some jQuery
                 </div>
             </div>
             <div class="skill">
-                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill4')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>HTML &amp CSS
+                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skillZ')">
+                    SQL
                 </h2>
-                <div class="skillDetails" id="skill4">
-                    Basic front-ent development
+                <div class="skillDetails" id="skillZ">
+                ER diagrams, MySQL, SQLite, Grouping, Triggers, Assertions
                 </div>
             </div>
             <div class="skill">
-                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill5')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>C
+                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill4')">
+                    HTML &amp CSS
                 </h2>
-                <div class="skillDetails" id="skill5">
-                    Pthreads, Processes, System-level programming
+                <div class="skillDetails" id="skill4">
+                    Basic front-end development
                 </div>
             </div>
             <div class="skill">
                 <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill6')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>Version Control
+                    Version Control
                 </h2>
                 <div class="skillDetails" id="skill6">
-                    Experience with subversion, perforce, and git
+                    Experience with Subversion, perforce, and git
+                </div>
+            </div>
+            <div class="skill">
+                <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skillY')">
+                    Probability
+                </h2>
+                <div class="skillDetails" id="skillY">
+                    Fundamentals of probability including axioms, common random variables, and the central limit thereom
                 </div>
             </div>
             <div class="skill last">
                 <h2 class="skillName" title="Click to toggle collapse" onmouseup="toggleCollapse('skill7')">
-                    <span class="stateAttribute"><img src="Images/Vertical.png"></span>LaTeX
+                    LaTeX
                 </h2>
                 <div class="skillDetails" id="skill7">
                     Basic LaTeX building off templates to make things like my resume

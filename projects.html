@@ -24,7 +24,8 @@
                     }
                 }
             }
-            function toggleCollapse(proj) {
+            function linkTo(proj) {
+                return;
                 proj = document.getElementById(proj);
                 expandState = getExpandState(getExpandState(proj.parentNode, "projectTitle"), "stateAttribute");
                 if (!expandState) expandState = "[]";
@@ -62,8 +63,56 @@
             <hr style="border: 1px solid orange;">
             <div id = "projectsContent">
                 <div class="project">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj1')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                    <h2 class="projectTitle" onmouseup="linkTo('projX')">
+                            <a href="https://worldvote.herokuapp.com">Team Fortress 2 Scoreboard</a>
+                        <span class="date">November 2014 - December 2014</span>
+                    </h2>
+                    <div class="projectDescription" id="projX">
+                        <div class="projectText">
+                             Team Fortress 2 only allows a limited number of spectators per game. For the web development class, our team created an 
+                             utility to let many spectators watch a game. We created a plugin which sends out post requests that are picked up by 
+                             our locally run node server. The server then uses socket.io to send information to clients. The clients maintain state using
+                             React.js and Flux. An example game of bots and scoreboard are shown in the video to the right.
+
+                        </div>
+                        <iframe src="https://www.youtube.com/v/bLARwToWyxY" alt="TF2 video" width="380px" class="picture"></iframe>
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" onmouseup="linkTo('projY')">
+                            <a href="https://worldvote.herokuapp.com">Worldvote</a>
+                        <span class="date">September 2014 - December 2014</span>
+                    </h2>
+                    <div class="projectDescription" id="projY">
+                        <div class="projectText">
+                             Have you ever wanted to vote a person up or down? That's what worldvote allows you to do.
+                             Built with Django, my_sql, and hosted on heroku, our team of three spent the semester creating
+                             a site meant to be like reddit but for people for our databases course. 
+                             <a href="https://github.com/paultgibbons/Worldvote">Link to github repo</a>. 
+                             Check out the video on the left for me giving a tour of the site.
+
+                        </div>
+                        <iframe src="https://www.youtube.com/v/K8hNJekfdII&feature=youtu.be" alt="Worldvote video" width="380px" class="picture"></iframe>
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" onmouseup="linkTo('projZ')">
+                            <a href="https://github.com/paultgibbons/HackIllinois2015">Hack Illinois 2015</a>
+                        <span class="date">February 2015</span>
+                    </h2>
+                    <div class="projectDescription" id="projZ">
+                        <div class="projectText">
+                             I partnered with a friend and two strangers to create an iOS application, Buzzed Buddy. 
+                             The application let users find the nearest cheap food, find their way home with the school's bus system,
+                             or call a pre-programmed number. To create this, I learned Swift and used it to make HTTP calls to the 
+                             bus system's API and parsed the JSON response. In addition, I worked with autolayout and constraints to 
+                             make parts of the UI. Finally, I made the code that stored a friend's phone number and later called it.
+                        </div>
+                        <img src="Images/buzzedBuddy.png" alt="Buzzed Buddy photo" width="150px" class="picture">
+                    </div>
+                </div>
+                <div class="project">
+                    <h2 class="projectTitle" onmouseup="linkTo('proj1')">
                             Interactive Intelligence Internship 
                         <span class="date">May 2014 - August 2014</span>
                     </h2>
@@ -80,14 +129,12 @@
                                 There were lots of fun activities as well, such as a canoe trip, LAN parties, a pool party, and more.
                             </p>
                         </div>
-                        <img src="Images/inin.jpg" alt="Interactive Intelligence photo" width="335px" class="picture">
+                        <img src="Images/inin.png" alt="Interactive Intelligence photo" width="335px" class="picture">
                     </div>
-                    <!-- link to review -->
                 </div>
                 <div class="project">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj2')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
-                            Hack Illinois
+                    <h2 class="projectTitle" onmouseup="linkTo('proj2')">
+                            <a href = "https://github.com/paultgibbons/HackIllinois2014">Hack Illinois 2014</a>
                         <span class="date">April 2014</span>
                     </h2>
                     <div class="projectDescription" id="proj2">
@@ -103,8 +150,7 @@
                     </div>
                 </div>
                 <div class="project">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj3')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                    <h2 class="projectTitle" onmouseup="linkTo('proj3')">
                             CS 125 Course Assistant
                         <span class="date">January 2014 - May 2014</span>
                     </h2>
@@ -118,9 +164,8 @@
                     </div>
                 </div>
                 <div class="project">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj4')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
-                            Facebook Hackathon
+                    <h2 class="projectTitle" onmouseup="linkTo('proj4')">
+                            <a href="https://github.com/paultgibbons/FacebookHackathon">Facebook Hackathon</a>
                         <span class="date">November 2013</span>
                     </h2>
                     <div class="projectDescription" id="proj4">
@@ -133,14 +178,13 @@
                     </div>
                 </div>
                 <div class="project">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj5')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
-                            Prerequisite Calculator
+                    <h2 class="projectTitle" onmouseup="linkTo('proj5')">
+                            <a href="http://web.engr.illinois.edu/~ptgibbo2/test.html">Prerequisite Calculator</a>
                         <span class="date">October 2013</span>
                     </h2>
                     <div class="projectDescription" id="proj5">
                         <div class="projectText">
-                            This incomplete project found <a href="TODO ADD LINK TO HERE">here</a> calculates 
+                            This project calculates 
                             courses a student is able to take based on what courses they have completed. It was inspired
                             by needing to click on every given course to see what classes I needed to have already taken.
                             The claculation is all done using front-end languages and jQuery 
@@ -149,8 +193,7 @@
                     </div>
                 </div>
                 <div class="project last">
-                    <h2 class="projectTitle" title="Click to toggle collapse" onmouseup="toggleCollapse('proj6')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>
+                    <h2 class="projectTitle" onmouseup="linkTo('proj6')">
                             Personal Site
                         <span class="date">Ongoing</span>
                     </h2>
