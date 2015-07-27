@@ -15,5 +15,10 @@
     font-family: monospace, sans-serif;
 }
 p {
-    margin-top: 50px;
+    margin-top: 10px;
+}
+#resume {
+    width: 845px;
+    margin: 20px 282px;
+    height: 1080px;
 }
