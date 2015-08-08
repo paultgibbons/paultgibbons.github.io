@@ -9,14 +9,6 @@
         <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
         <link rel="stylesheet" type="text/css" href="Stylesheets/projects.css">
         <script type="text/javascript">
-            function navMouseOver(color) {
-                var header = document.getElementById("topNavBar");
-                header.style.border = "1px solid "+color;
-            }
-            function exitNav() {
-                var header = document.getElementById("topNavBar");
-                header.style.border = "1px solid white";
-            }
             function getExpandState(proj, kw) {
                 for (var i = 0; i < proj.childNodes.length; i++) {
                     if (proj.childNodes[i].className===kw) {
@@ -38,20 +30,21 @@
                 }
             }
         </script>
+        <script type="text/javascript" src="Scripts/headerScripts.js"></script>
     </head>
     <body>
         <div class="header" id="topNavBar">
-            <div class="authorName">
+            <div id="authorName">
                 Paul Gibbons
             </div>
             <div class="k6Image"><img src="Images/navBarGraph.png" height="80px" width="80px"></div>
             <div class="navbar">
                 <div onclick="location.href='index.html'" class="navbarButton" onmouseover="navMouseOver('red')" onmouseout="exitNav()">Home</div>
                 <div onclick="location.href='projects.html'" class="navbarButton" onmouseover="navMouseOver('orange')" onmouseout="exitNav()">Projects</div>
-                <div onclick="location.href='skills.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Skills</div>
-                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('green')" onmouseout="exitNav()">Courses</div>
+                <div onclick="location.href='experience.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Experience</div>
+                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('lime')" onmouseout="exitNav()">Courses</div>
                 <div onclick="location.href='resume.pdf'" class="navbarButton" onmouseover="navMouseOver('blue')" onmouseout="exitNav()">Resume</div>
-                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('indigo')" onmouseout="exitNav()">About me</div>
+                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('purple')" onmouseout="exitNav()">About me</div>
                 <div onclick="location.href='contact.html'" class="navbarButton" onmouseover="navMouseOver('violet')" onmouseout="exitNav()">Contact</div>       
             </div>
         </div>
@@ -62,6 +55,23 @@
             </div>
             <hr style="border: 1px solid orange;">
             <div id = "projectsContent">
+                <div class="project">
+                    <h2 class="projectTitle" onmouseup="linkTo('projW')">
+                            <a href="https://uiucfipy.appspot.com/">Financial Calculator</a>
+                        <span class="date">May 2015</span>
+                    </h2>
+                    <div class="projectDescription" id="projW">
+                        <div class="projectText">
+                             This project Calculates a correlation matrix for stocks using Yahoo finance API.
+                             It provides information about each stock queried.
+                             I made this for a class where we were allowed to do whatever we wanted,
+                             and I chose this because I was interested in how the stock market worked at the time.
+                             Implemented and hosted using Google App Engine in python.
+
+                        </div>
+                        <img src="Images/fipy.jpg" alt="UIUCFiPY photo" width="380px" class="picture">
+                    </div>
+                </div>
                 <div class="project">
                     <h2 class="projectTitle" onmouseup="linkTo('projX')">
                             <a href="https://github.com/paultgibbons/TF2_Scoreboard">Team Fortress 2 Scoreboard</a>
@@ -112,27 +122,6 @@
                     </div>
                 </div>
                 <div class="project">
-                    <h2 class="projectTitle" onmouseup="linkTo('proj1')">
-                            Interactive Intelligence Internship 
-                        <span class="date">May 2014 - August 2014</span>
-                    </h2>
-                    <div class="projectDescription" id="proj1">
-                        <div class="projectText">
-                            <p>As a summer intern, I did a variety of tasks including
-                                <ul>
-                                    <li>Update XML based documentation</li>
-                                    <li>Add to node-based javascript testing framework</li>
-                                    <li>Code generate a Java library to interact with company's RESTful API.
-                                    Generator coded in C#. Similar libraries existed for Javascript, Objective-C</li>
-                                    <li>Attended and participated in weekly team status meetings</li>
-                                </ul>
-                                There were lots of fun activities as well, such as a canoe trip, LAN parties, a pool party, and more.
-                            </p>
-                        </div>
-                        <img src="Images/inin.png" alt="Interactive Intelligence photo" width="335px" style="padding-left:22px" class="picture">
-                    </div>
-                </div>
-                <div class="project">
                     <h2 class="projectTitle" onmouseup="linkTo('proj2')">
                             <a href = "https://github.com/paultgibbons/HackIllinois2014">Hack Illinois 2014</a>
                         <span class="date">April 2014</span>
@@ -161,20 +150,6 @@
                             Object-Oriented design. 
                         </div>
                         <img src="Images/cs125ca.png" alt="CS 125 CA picture" width="193px" style="padding-left:93px" class="picture">
-                    </div>
-                </div>
-                <div class="project">
-                    <h2 class="projectTitle" onmouseup="linkTo('proj4')">
-                            <a href="https://github.com/paultgibbons/FacebookHackathon">Facebook Hackathon</a>
-                        <span class="date">November 2013</span>
-                    </h2>
-                    <div class="projectDescription" id="proj4">
-                        <div class="projectText">
-                            Worked as part of a group of 4 to create a java app to 
-                            graphically show extended facebook family tree. My personal role was to
-                            calculate the locations of the images of friends to appear on screen
-                        </div>
-                        <img src="Images/fbhack.png" alt="Facebook Hack picture" width="380px" class="picture">
                     </div>
                 </div>
                 <div class="project">

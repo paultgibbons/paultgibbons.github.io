@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Homepage for Paul Gibbons">
+        <meta name="author" content="Paul Gibbons">
+        <title>Gibbons 101</title>
+        <link rel="shortcut icon" href="Images/navBarGraph.png">
+        <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
+        <link rel="stylesheet" type="text/css" href="Stylesheets/experience.css">
+        <script type="text/javascript">
+            function getExpandState(proj, kw) {
+                for (var i = 0; i < proj.childNodes.length; i++) {
+                    if (proj.childNodes[i].className===kw) {
+                        return proj.childNodes[i];
+                    }
+                }
+            }
+            function toggleCollapse(proj) {
+                return;
+                proj = document.getElementById(proj);
+                expandState = getExpandState(getExpandState(proj.parentNode, "experienceName"), "stateAttribute");
+                if (!expandState) expandState = "[]";
+                if (proj.style.display==="none") {
+                    expandState.innerHTML = '<img src="Images/Vertical.png">';
+                    proj.style.display = "block";
+                } else {
+                    expandState.innerHTML = '<img src="Images/Horizontal.png">';
+                    proj.style.display = "none";
+                }
+            }
+        </script>
+        <script type="text/javascript" src="Scripts/headerScripts.js"></script>
+    </head>
+    <body>
+        <div class="header" id="topNavBar">
+            <div id="authorName">
+                Paul Gibbons
+            </div>
+            <div class="k6Image"><img src="Images/navBarGraph.png" height="80px" width="80px"></div>
+            <div class="navbar">
+                <div onclick="location.href='index.html'" class="navbarButton" onmouseover="navMouseOver('red')" onmouseout="exitNav()">Home</div>
+                <div onclick="location.href='projects.html'" class="navbarButton" onmouseover="navMouseOver('orange')" onmouseout="exitNav()">Projects</div>
+                <div onclick="location.href='experience.html'" class="navbarButton" onmouseover="navMouseOver('yellow')" onmouseout="exitNav()">Experience</div>
+                <div onclick="location.href='courses.html'" class="navbarButton" onmouseover="navMouseOver('lime')" onmouseout="exitNav()">Courses</div>
+                <div onclick="location.href='resume.pdf'" class="navbarButton" onmouseover="navMouseOver('blue')" onmouseout="exitNav()">Resume</div>
+                <div onclick="location.href='about.html'" class="navbarButton" onmouseover="navMouseOver('purple')" onmouseout="exitNav()">About me</div>
+                <div onclick="location.href='contact.html'" class="navbarButton" onmouseover="navMouseOver('violet')" onmouseout="exitNav()">Contact</div>       
+            </div>
+        </div>
+            <div class="pageTitle">
+                <h1 style="font-size:280%;">Skills</h1>
+            </div>
+            <hr style="border: 1px solid yellow;">
+        <div id="experiences">
+            <div id = "experienceContent">
+                <!-- throw in code segment for each skill -->
+                <div class="experience">
+                    <h2 class="experience_title" onmouseup="linkTo('projY')">
+                        <span class="job_location">Adobe</span>
+                        <span class="job_title">Software Engineer Intern</span>
+                        <span class="date">May 2015 - August 2015</span>
+                    </h2>
+                    <div class="experienceDescription" id="projY">
+                        <div class="experienceText">
+                            <p>For second summer internship, I was a software engineer intern at Adobe. My tasks included
+                                <ul>
+                                    <li>Writing integration tests for a Real Time Bidding system for 
+                                        <a href="https://en.wikipedia.org/wiki/Display_advertising">Display</a>
+                                    </li>
+                                    <li>Automation of database syncing validation for PostgreSQL databases</li>
+                                    <li>Unit testing a Spring server using JUnit and Mockito Framework</li>
+                                    <li>Attending three times a week scrum meetings</li>
+                                </ul>
+                                Some activites I participated in outside of work include bowling, a culinary class, rock climbing, and going to a San Fransisco Giants game.
+                                I thoroughly enjoyed my time on the quality engineering team for Adobe Media Optimizer, but do not wish to pursue future opportunities in quality engineering.
+                            </p>
+                        </div>
+                        <img src="Images/adobe.png" alt="Interactive Intelligence photo" width="335px" style="padding-left:22px" class="picture">
+                    </div>
+                </div>
+                <div class="experience">
+                    <h2 class="experience_title" onmouseup="linkTo('projZ')">
+                        <span class="job_location">Interactive Intelligence</span>
+                        <span class="job_title">Software Engineer Intern</span>
+                        <span class="date">May 2014 - August 2014</span>
+                    </h2>
+                    <div class="experienceDescription" id="projZ">
+                        <div class="experienceText">
+                            <p>As a summer intern, I did a variety of tasks including
+                                <ul>
+                                    <li>Added to node-based javascript testing framework</li>
+                                    <li>Code generated a Java library by parsing XML documentation. The library makes http calls to the company's RESTful API.
+                                    Generator coded in C#. Similar libraries existed for Javascript and Objective-C</li>
+                                    <li>Updated XML based documentation</li>
+                                    <li>Attended and participated in weekly team status meetings</li>
+                                </ul>
+                                There were lots of fun activities as well, such as a canoe trip, LAN parties, a pool party, and more.
+                            </p>
+                        </div>
+                        <img src="Images/inin.png" alt="Interactive Intelligence photo" width="335px" style="padding-left:22px" class="picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

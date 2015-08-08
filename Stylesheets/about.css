@@ -2,10 +2,22 @@
     font-size: 20px;
     margin: 20px 200px 20px 200px;
 }
+#aboutme * a:link {
+    color: purple;
+}
+#aboutme * a:visited {
+    color: purple;
+}
 #xkcd {
     margin: 0 auto;
     width: 300px;
     padding: 20px;
+}
+#xkcd * a:link {
+    color: purple;
+}
+#xkcd * a:visited {
+    color: indigo;
 }
 #xkcdFooter {
     text-align: center;

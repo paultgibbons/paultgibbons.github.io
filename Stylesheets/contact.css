@@ -14,6 +14,12 @@ a {
 #contactContent {
     margin: 0px 100px;
 }
+#contactContent * a:link {
+    color: darkviolet;
+}
+#contactContent * a:visited {
+    color: violet;
+}
 #contactFooter {
     font-style: italic;
     text-align: center;

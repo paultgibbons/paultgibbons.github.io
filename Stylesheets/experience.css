@@ -1,0 +1,62 @@
+.experience {
+    padding: 20px; border-bottom: 1px solid yellow;
+    width: 33%;
+}
+.job_title {
+    padding: 0% 5%;
+    font-weight: normal;
+    font-size: 24px;
+    width: 33%;
+}
+.job_location {
+    width: 33%;
+}
+.experience {
+    width: 100%;
+    padding: 20px; border-bottom: 1px solid yellow;
+}
+.experience_title {
+    width: 100%;
+}
+span {
+    display: inline-block;
+}
+.date {
+    padding-left: 10px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+}
+.stateAttribute {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    width: 30px;
+}
+.experienceDescription {
+    padding-left: 80px;
+}
+.experienceTitle {
+    margin-top: 0px;
+}
+#experiencesContent {
+    margin: 0px 100px;
+}
+.experienceText {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 250px;
+}
+.picture {
+    display: inline-block;
+    height: 250px;
+    margin: 10px;
+    position: absolute;
+    right: 20px;
+}
+.experiencelast {
+    padding: 20px;
+    width: 33%;
+}
