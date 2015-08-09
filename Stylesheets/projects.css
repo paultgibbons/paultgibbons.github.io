@@ -38,3 +38,8 @@
     border: 0px;
     margin-bottom: 40px;
 }
+@media all and (max-width: 800px) {
+    .projectText {
+        width: 100%;
+    }
+}
