@@ -1,5 +1,4 @@
 .kw {
-    color: red; font-weight: bold;
 }
 .course {
     padding: 20px; border-bottom: 1px solid green;
@@ -18,11 +17,13 @@
     width: 30px;
 }
 .courseDescription {
-    padding-left: 80px;
+    padding-left: 10px;
+    display: inline;
 }
 .courseName {
     cursor: pointer;
     margin-top: 0px;
+    display: inline;
 }
 #current {
     margin: 0px 100px;
@@ -33,4 +34,7 @@
 .last {
     border: 0px;
     margin-bottom: 40px;
+}
+hr {
+    margin-bottom: 0px;
 }

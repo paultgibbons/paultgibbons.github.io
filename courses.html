@@ -8,27 +8,6 @@
         <link rel="shortcut icon" href="Images/navBarGraph.png">
         <link type="text/css" rel="stylesheet" href="Stylesheets/headerStyles.css">
         <link rel="stylesheet" type="text/css" href="Stylesheets/courses.css">
-        <script type="text/javascript">
-            function getExpandState(proj, kw) {
-                for (var i = 0; i < proj.childNodes.length; i++) {
-                    if (proj.childNodes[i].className===kw) {
-                        return proj.childNodes[i];
-                    }
-                }
-            }
-            function toggleCollapse(proj) {
-                proj = document.getElementById(proj);
-                expandState = getExpandState(getExpandState(proj.parentNode, "courseName"), "stateAttribute");
-                if (!expandState) expandState = "[]";
-                if (proj.style.display==="none") {
-                    expandState.innerHTML = '<img src="Images/Vertical.png">';
-                    proj.style.display = "block";
-                } else {
-                    expandState.innerHTML = '<img src="Images/Horizontal.png">';
-                    proj.style.display = "none";
-                }
-            }
-        </script>
         <script type="text/javascript" src="Scripts/headerScripts.js"></script>
     </head>
     <body>
@@ -49,187 +28,96 @@
         </div>
         <div id="courses">
             <div class="pageTitle">
-                <h1 style="font-size:280%;">Current Courses (Fall 2015)</h1>
+                <h1>Current Courses (Fall 2016)</h1>
             </div>
             <hr style="border: 1px solid green;">
             <div id="current">
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseF')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 446 · Machine Learning
-                    </h2>
-                    <div class="courseDescription" id="courseF">
-                    Theory and basic techniques in machine learning. Major theoretical paradigms and key concepts developed in machine learning in the context of applications such as natural language and text processing, computer vision, data mining, adaptive computer systems and others. Review of several supervised and unsupervised learning approaches: methods for learning linear representations; on-line learning, Bayesian methods; decision-trees; features and kernels; clustering and dimensionality reduction.
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseE')">
+                        CS 425 · Distibuted Systems
+                    </h3>
+                    <div class="courseDescription" id="courseE">
+                    Protocols, specification techniques, global states, reliable broadcast, transactions and commitment, security, and real-time systems.
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseG')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 412 · Introduction to Data Mining
-                    </h2>
-                    <div class="courseDescription" id="courseG">
-                    Concepts, techniques, and systems of data warehousing and data mining. Design and implementation of data warehouse and on-line analytical processing (OLAP) systems; data mining concepts, methods, systems, implementations, and applications.
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseE')">
+                        CS 498 · Data Science
+                    </h3>
+                    <div class="courseDescription" id="courseE">
+                    Organizing, manipulating, analyzing, and visualizing data using R, Regex, XML, SQL, supervised and unsupervised statistical learning 
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseH')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 421 · Programming Languages and Compilers
-                    </h2>
-                    <div class="courseDescription" id="courseH">
-                    Structure of programming languages and their implementation. Basic language design principles; abstract data types; functional languages; type systems; object-oriented languages. Basics of lexing, parsing, syntax-directed translation, semantic analysis, and code generation.
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseE')">
+                        CS 498 · Social &amp Informational Networks
+                    </h3>
+                    <div class="courseDescription" id="courseE">
+                    Random graphs, networks and social contexts, networks and game theory, information diffusion and detection. 
                     </div>
                 </div>
             </div>
             <div class="pageTitle">
-                <h1 style="font-size:280%;">Completed Courses</h1>
+                <h1>Completed Courses</h1>
             </div>
             <hr style="border: 1px solid green;">
             <div id="completed">
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseE')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 374 · Algorithms and Models of Computation
-                    </h2>
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseE')">
+                        CS 473 · Algorithms
+                    </h3>
                     <div class="courseDescription" id="courseE">
-                    This course is a combination of the old courses CS 373 and CS 473.
-                    Fundamentals of <span class="kw">Algorithms</span> and defining computers. Icludes Dynamic Programming, Defining Computers,
-                     Graph Algorithms, P v NP, Turing Machines
+                    Dynamic Programming, Flow, Linear Programming, Optimization, Graph Algorithms, P v NP
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course8')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 225 · Data Structures &amp Algorithms
-                    </h2>
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course8')">
+                        CS 225 · Data Structures
+                    </h3>
                     <div class="courseDescription" id="course8">
-                        Data abstractions: elementary data structures including 
-                         <span class="kw">lists, stacks, queues, heaps, hash-tables and trees</span> (Binary, AVL, KD, Quad, B) 
-                         and their implementation
-                         using an object-oriented programming language <span class="kw">C++</span>.
-                         Solutions to a variety of computational problems such as search on graphs and trees. 
-                         Elementary <span class="kw">Algorithmic Analysis</span>.
+                        graphs, lists, stacks, queues, heaps, hash-tables and trees (Binary, AVL, KD, Quad, B) 
+                         in C++
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course1')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 241 · System Programming
-                    </h2>
-                    <div class="courseDescription" id="course1">
-                        Basics of system programming, including POSIX processes, process control,
-                         inter-process communication, synchronization, signals, simple memory management, 
-                         file I/O and directories, shell programming, socket network programming, 
-                         RPC programming in distributed systems, basic security mechanisms, 
-                         and standard tools for systems programming such as debugging tools.
-                         Uses <span class="kw">C</span> programming language
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseF')">
+                        CS 446 · Machine Learning
+                    </h3>
+                    <div class="courseDescription" id="courseF">
+                     Learning theory, linear representations, on-line learning, Bayesian methods, decision-trees, features and kernels, and clustering
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseD')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 484 · Parallel Programming
-                    </h2>
-                    <div class="courseDescription" id="courseD">
-                        Techniques for the programming of all classes of parallel computers and devices including shared memory and distributed memory multiprocessors,
-                         <span class="kw">SIMD</span> processors and co-processors, and special purpose devices. Key concepts in parallel programming such as reactive 
-                         and transformational programming, speculation, speedup, isoefficiency, and load balancing. Synchronization primitives, libraries and languages 
-                         for parallel programming such as <span class="kw">OpenMP and MPI</span>, performance monitoring, program tuning, analysis and programming of 
-                         numerical and symbolic parallel algorithms. Implement perfromence measuring tools.
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseF')">
+                        CS 546 · Machine Learning in NLP
+                    </h3>
+                    <div class="courseDescription" id="courseF">
+                     Contemporary techniques in structured learning, prediction vs inference, loss functions
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseC')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 242 · Programming Studio
-                    </h2>
-                    <div class="courseDescription" id="courseC">
-                        Intensive programming lab intended to strengthen skills in programming. How to write <span class="kw">readable code</span>. 
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('courseG')">
+                        CS 412 · Data Mining
+                    </h3>
+                    <div class="courseDescription" id="courseG">
+                    OLAP systems, Data cubes, dimensionality reduction and PCA
                     </div>
                 </div>
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course3')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 398 · Web App Development
-                    </h2>
-                    <div class="courseDescription" id="course3">
-                        An experimental course, this class teaches full stack web development standards, including
-                         <span class="kw">HTML, CSS, Javascript</span>, server-side programming, interactions with databases,
-                         <span class="kw">HTTP</span>, and Web Sockets. This class does not teach <em>Framework x</em>, but
-                         rather focuses on adhering to standard stylistic procedures and optimization.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course4')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 411 · Database Systems
-                    </h2>
-                    <div class="courseDescription" id="course4">
-                        Examination of the logical organization of databases: the entity-relationship model;
-                         the hierarchical, network, and relational data models and their languages. 
-                         Functional dependencies and normal forms. Design, implementation, 
-                         use of <span class="kw">SQL</span>,
-                         and optimization of query languages; security and integrity; 
-                         concurrency control, and distributed database systems.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course9')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 233 · Computer Architecture
-                    </h2>
-                    <div class="courseDescription" id="course9">
-                        Fundamentals of computer architecture: digital logic design, 
-                         working up from the logic gate level to understand the function of a simple computer;
-                         machine-level programming in <span class="kw">MIPS</span> to understand implementation of high-level languages; 
-                         performance models of modern computer architectures to enable 
-                         performance optimization of software; hardware primitives for parallelism and security.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 357 · Numerical Methods I
-                    </h2>
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course2')">
+                        CS 357 · Numerical Methods I
+                    </h3>
                     <div class="courseDescription" id="course2">
-                        Fundamentals of numerical methods for students in science and engineering; 
-                         floating-point computation, systems of linear equations, approximation of functions and integrals, 
-                         the single nonlinear equation, and the numerical solution of ordinary differential equations; 
-                         various applications in science and engineering; 
-                         programming exercises and use of high quality mathematical library routines.
-                         using <span class="kw">Python</span> with heavy use of numpy module
+                        Approximation of functions and integrals, numerical solution of ordinary differential equations,Python and numpy
                     </div>
                 </div>
                 
                 <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course5')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 498 · Probability in Computer Science
-                    </h2>
+                    <h3 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course5')">
+                        CS 498 · Probability
+                    </h3>
                     <div class="courseDescription" id="course5">
-                         Introduction to probability theory with applications to computer science.
-                          Calculations made using <span class="kw">R</span>
-                          Topics include conditional probability, independence, Bayes theorem, random variables, 
-                          joint and conditional distributions, expectation, variance and covariance, 
-                          central limit theorem, law of large numbers, Markov chains, entropy, maximum likelihood estimation, 
-                          Bayes estimation, linear regression, principal component analysis, hypothesis testing, 
-                          and confidence intervals.
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course6')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 125 ·  Intro to Computer Science
-                    </h2>
-                    <div class="courseDescription" id="course6">
-                        Introduction to programming concepts in <span class="kw">Java</span> using <span class="kw">Eclipse</span> IDE
-                    </div>
-                </div>
-                <div class="course">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course7')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>CS 173 · Discrete Structures
-                    </h2>
-                    <div class="courseDescription" id="course7">
-                        Study of discrete mathematical structures frequently encountered 
-                         in the study of Computer Science.
-                         Sets, propositions, Boolean algebra, induction, recursion, relations,
-                         functions, function runtimes, and graphs.
-                    </div>
-                </div>
-                <div class="course last">
-                    <h2 class="courseName" title="Click to toggle collapse" onmouseup="toggleCollapse('course10')">
-                        <span class="stateAttribute"><img src="Images/Vertical.png"></span>Math 461 · Probability Theory
-                    </h2>
-                    <div class="courseDescription" id="course10">
-                        Introduction to mathematical probability; 
-                         includes the calculus of probability, combinatorial analysis, random variables, <span class="kw">Bayes Theorem</span>
-                         expectation, distribution functions, moment-generating functions, and central limit theorem.
+                         R, Random variables, Markov chains, entropy, MLE, Bayes theorem, Bayes estimation, linear regression
                     </div>
                 </div>
             </div>
